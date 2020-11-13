@@ -11,12 +11,9 @@
      http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
      http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
      http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
-	
-	
-	
 
-   <context:annotation-config />
-	<context:component-scan base-package="com.how2java.service" />
+<!-- 使用了context:component-scan之后可以省略  <context:annotation-config />-->
+	<context:component-scan base-package="com.songqingchao.service" />
 
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">  
 	  <property name="driverClassName">  
@@ -36,9 +33,9 @@
 	
 	
 	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionFactoryBean">
-		<property name="typeAliasesPackage" value="com.how2java.pojo" />
+		<property name="typeAliasesPackage" value="com.songqingchao.pojo" />
 		<property name="dataSource" ref="dataSource"/>
-		<property name="mapperLocations" value="classpath:com/how2java/mapper/*.xml"/>
+		<property name="mapperLocations" value="classpath:com/songqingchao/mapper/*.xml"/>
 		<property name="plugins">
 		    <array>
 		      <bean class="com.github.pagehelper.PageInterceptor">
@@ -53,9 +50,6 @@
 	</bean>
 
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="com.how2java.mapper"/>
+		<property name="basePackage" value="com.songqingchao.mapper"/>
 	</bean>
-	
-
-
 </beans>
