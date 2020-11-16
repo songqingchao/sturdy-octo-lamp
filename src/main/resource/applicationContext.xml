@@ -20,18 +20,18 @@
 	      <value>com.mysql.jdbc.Driver</value>  
 	  </property>  
 	  <property name="url">  
-	      <value>jdbc:mysql://localhost:3306/how2java?characterEncoding=UTF-8</value>  
+	      <value>jdbc:mysql://localhost:3306/localhost_3306?characterEncoding=UTF-8</value>
 	
 	  </property>  
 	  <property name="username">  
 	      <value>root</value>  
 	  </property>  
 	  <property name="password">  
-	      <value>admin</value>  
+	      <value>root</value>
 	  </property>  	
 	</bean>
 	
-	
+<!-- mybatis配置 sqlsessionfactorybean配置xml文件位置，mapperscannerconfigure配置接口文件位置-->
 	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="typeAliasesPackage" value="com.songqingchao.pojo" />
 		<property name="dataSource" ref="dataSource"/>
