@@ -1,5 +1,0 @@
-com\songqingchao\controller\UserController.class
-com\songqingchao\service\impl\UserServiceImpl.class
-com\songqingchao\entity\User.class
-com\songqingchao\service\UserService.class
-com\songqingchao\dao\UserDao.class

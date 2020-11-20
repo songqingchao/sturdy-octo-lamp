@@ -3,6 +3,7 @@ package com.songqingchao.controller;
 import com.songqingchao.entity.User;
 import com.songqingchao.service.UserService;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
@@ -21,7 +22,7 @@ public class UserController {
      */
     @Resource
     private UserService userService;
-float a=3;
+    float a=3;
     /**
      * 通过主键查询单条数据
      *
@@ -29,8 +30,14 @@ float a=3;
      * @return 单条数据
      */
     @RequestMapping("selectOne")
+    @ResponseBody
     public User selectOne(Integer id) {
         return this.userService.queryById(id);
+    }
+
+    @RequestMapping("view")
+    public String toView(){
+        return "index";
     }
 
 }

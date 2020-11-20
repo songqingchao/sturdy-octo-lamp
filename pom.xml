@@ -39,6 +39,21 @@
 
   <dependencies>
 
+
+<!--    responsebody所需要的jar包-->
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-core</artifactId>
+      <version>2.4.3</version>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>2.4.3</version>
+    </dependency>
+
+
+
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
@@ -139,7 +154,7 @@
   </dependencies>
 
   <build>
-    <finalName>sturdy-octo-lamp</finalName>
+    <finalName>why</finalName>
       <resources>
           <resource>
               <directory>src/main/resource</directory>
